@@ -1,0 +1,22 @@
+nav{
+    padding: 15px;
+    background-color: #1c1d33;
+    display: flex;
+    justify-content: center;
+    font-weight: 400;
+    border-radius: 0 0 10% 10%;
+
+    & a{
+        padding: 25px;
+        text-decoration: none;
+        color: #c1c1cc;
+        transition: all .3s ease-in;
+ 
+    
+    }
+
+    & a:hover{
+        color: #bb2106;
+        outline: 0  1px  solid #f8f4f4;
+    }
+}
