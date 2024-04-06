@@ -10,7 +10,7 @@ export const CardMovie = ({ data }) => {
    
    {data.map((movie) => {
         return (
-          <asside key={movie.id}>
+          <section key={movie.id}>
              <div className="card" >
               <img
                 src={` https://image.tmdb.org/t/p/w300/${movie.poster_path}`}
@@ -26,7 +26,7 @@ export const CardMovie = ({ data }) => {
 
         
               
-          </asside>
+          </section>
            
 
         );

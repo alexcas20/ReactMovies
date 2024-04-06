@@ -1,13 +1,24 @@
-
-import './navbar.css'
-
+import "./navbar.css";
+import HomeIcon from "@mui/icons-material/Home";
+import MoviesIcon from "@mui/icons-material/Movie";
+import SeriesIcon from "@mui/icons-material/Tv";
 
 export const Navbar = () => {
   return (
-    <nav>
-    <a href="">Home</a>
-    <a href="">Peliculas</a>
-    <a href="">Series</a>
-  </nav>
-  )
-}
+ 
+      <nav>
+        <a href="">
+          <HomeIcon />
+        </a>
+        <a href="">
+          <MoviesIcon />
+        </a>
+        <a href="">
+          <SeriesIcon />
+        </a>
+
+        <input type="text" placeholder="Search..." />
+      </nav>
+      
+  );
+};

@@ -13,13 +13,13 @@ export const Home = () => {
       <Navbar />
       <Carrousel />
 
-      <section>
+      
         <h2>Popular Now! 🎇</h2>
         <hr />
 
        <CardMovie data={data}/>
 
-      </section>
-    </>
+      </>
+
   );
 };
