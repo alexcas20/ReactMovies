@@ -1,5 +1,6 @@
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Button } from '@mui/material';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -7,6 +8,8 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
 import './carrousel.css'
+
+import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
 
 // import required modules
 import { Parallax, Pagination, Navigation } from 'swiper/modules';
@@ -55,7 +58,7 @@ export default function Carrousel() {
               tincidunt ut libero. Aenean feugiat non eros quis feugiat.
             </p>
             <div className="actions">
-                <button type="button">Show +</button>
+                <Button variant="contained" endIcon={<RemoveRedEyeIcon />}> More</Button>
             </div>
           </div>
         </SwiperSlide>
