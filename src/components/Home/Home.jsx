@@ -11,7 +11,7 @@ export const Home = () => {
   return (
     <>
       <Navbar />
-      <Carrousel />
+      <Carrousel  />
 
       
         <h2>Popular Now! 🎇</h2>

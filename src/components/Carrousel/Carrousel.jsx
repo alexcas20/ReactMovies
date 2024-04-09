@@ -1,103 +1,76 @@
 // Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Button } from '@mui/material';
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Button, IconButton } from "@mui/material";
 
 // Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
-import './carrousel.css'
+import "./carrousel.css";
 
-import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
+import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
 
 // import required modules
-import { Parallax, Pagination, Navigation } from 'swiper/modules';
+import { Pagination, Navigation } from "swiper/modules";
 
 export default function Carrousel() {
   return (
     <>
       <Swiper
         style={{
-          '--swiper-navigation-color': '#fff',
-          '--swiper-pagination-color': '#fff',
+          "--swiper-navigation-color": "#fff",
+          "--swiper-pagination-color": "#fff",
         }}
         speed={600}
-        parallax={true}
         pagination={{
           clickable: true,
         }}
+        simulateTouch={false}
         navigation={true}
-        modules={[Parallax, Pagination, Navigation]}
+        modules={[Pagination, Navigation]}
+        autoplay={{ delay: 1000 }}
         className="mySwiper"
       >
-        <div
-          slot="container-start"
-          className="parallax-bg"
-          style={{
-            'backgroundImage':
-              'url(https://swiperjs.com/demos/images/nature-1.jpg)',
-          }}
-          data-swiper-parallax="-23%"
-        ></div>
         <SwiperSlide>
-          <div className="title" data-swiper-parallax="-300">
-            Slide 1
+          <img
+            src="https://hips.hearstapps.com/vidthumb/images/1366-2000-65eaf3b90a802.jpeg"
+            alt=""
+          />
+          <div className="slide-text">
+            <h2>Kung Fu Panda 4</h2>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <IconButton size="small" >
+              <RemoveRedEyeIcon /> Show More
+            </IconButton>
           </div>
-          <div className="subtitle" data-swiper-parallax="-200">
-            Subtitle
-          </div>
-          <div className="text" data-swiper-parallax="-100">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-              dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla
-              laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.
-              Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod.
-              Aliquam hendrerit lorem at elit facilisis rutrum. Ut at
-              ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec,
-              tincidunt ut libero. Aenean feugiat non eros quis feugiat.
-            </p>
-            <div className="actions">
-                <Button variant="contained" endIcon={<RemoveRedEyeIcon />}> More</Button>
-            </div>
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <img
+            src="https://pbs.twimg.com/media/GIj_-pcWsAATEz6?format=jpg"
+            alt=""
+          />
+
+          <div className="slide-text">
+            <h2>Godzilla x Kong</h2>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <IconButton size="small" >
+              <RemoveRedEyeIcon /> Show More
+            </IconButton>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="title" data-swiper-parallax="-300">
-            Slide 2
-          </div>
-          <div className="subtitle" data-swiper-parallax="-200">
-            Subtitle
-          </div>
-          <div className="text" data-swiper-parallax="-100">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-              dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla
-              laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.
-              Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod.
-              Aliquam hendrerit lorem at elit facilisis rutrum. Ut at
-              ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec,
-              tincidunt ut libero. Aenean feugiat non eros quis feugiat.
-            </p>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="title" data-swiper-parallax="-300">
-            Slide 3
-          </div>
-          <div className="subtitle" data-swiper-parallax="-200">
-            Subtitle
-          </div>
-          <div className="text" data-swiper-parallax="-100">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-              dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla
-              laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.
-              Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod.
-              Aliquam hendrerit lorem at elit facilisis rutrum. Ut at
-              ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec,
-              tincidunt ut libero. Aenean feugiat non eros quis feugiat.
-            </p>
+          <img
+            src="https://espaciocinefilo.com/wp-content/uploads/2023/12/Poster-oficial-Madame-Web.jpg"
+            alt=""
+          />
+          <div className="slide-text">
+            <h2>Madame Web</h2>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <IconButton size="small">
+              <RemoveRedEyeIcon /> Show More
+            </IconButton>
           </div>
         </SwiperSlide>
       </Swiper>
