@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 
 
-export const useFetch = (url) => {
+export const useFetch = (url,filter) => {
 
 
  
@@ -19,8 +19,8 @@ export const useFetch = (url) => {
 
   const getFetch = async () => {
     try {
-
-      const response = await fetch(url, options);
+      const formatUrl = url+filter;
+      const response = await fetch(formatUrl, options);
       const dataResponse = await response.json();
       setData(dataResponse.results);
 

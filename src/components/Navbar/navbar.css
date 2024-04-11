@@ -1,5 +1,9 @@
 
 
+*:focus {
+  outline: none;
+}
+
 nav{
         padding: 35px 10px 40px 50px;
         background-color: #1c1d33;
@@ -9,42 +13,67 @@ nav{
         z-index: 100;
     
        
-      & input{
-        margin-right: 50px;
-        padding: 5px;
+      & .search{
+        background-color: #11e280b7;
+        display: flex;
         position: absolute;
-        top: 35px;
-        right: 0;
+        top: 30px;
+        right: 30px;
         border: none;
         border-radius: 5px;
-        width: 100px;
-        transition: all .3s ease-in;
+        width: 40px;
+        transition: all .6s ease-in-out;
+
+        & input{
+          background-color: transparent;
+          border: none;
+          width: 100%;
+
+        
+
+        }
+
+
+        & button{
+          color: #fff;
+        }
+
+        &:hover{
+          width: 250px;
+        }
+
+       
+
+        
 
 
     
       }
 
-      & input:hover{
-        width: 250px;
-      }
+
+     
     
-        & a{
+    & a{
             padding: 25px 30px 15px 20px;
             text-decoration: none;
             color: #c1c1cc;
             transition: all .3s ease-in;
+
+
+            &:hover{
+              box-shadow: 0 2px 0 #fff;
+              color: #11e280b7;
+      }
      
         
-        }
+     }
     
     
-        & a:hover{
-            box-shadow: 0 2px 0 #fff;
-            color: #11e280b7;
-            transform: translateY(-5px);
-        }
+    
     
     
     }
+
+   
 
 

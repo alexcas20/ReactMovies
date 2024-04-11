@@ -5,8 +5,8 @@ import "./home.css";
 import { CardMovie } from "../CardMovie/CardMovie/CardMovie";
 
 export const Home = () => {
-  const URL = ` https://api.themoviedb.org/3/movie/popular`;
-  const { data } = useFetch(URL);
+  const URL = ` https://api.themoviedb.org/3/movie/`;
+  const { data } = useFetch(URL,'popular');
 
   return (
     <>

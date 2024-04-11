@@ -1,6 +1,6 @@
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Button, IconButton } from "@mui/material";
+import { IconButton } from "@mui/material";
 
 // Import Swiper styles
 import "swiper/css";
@@ -48,7 +48,7 @@ export default function Carrousel() {
 
         <SwiperSlide>
           <img
-            src="https://pbs.twimg.com/media/GIj_-pcWsAATEz6?format=jpg"
+            src="https://image.tmdb.org/t/p/original/z1p34vh7dEOnLDmyCrlUVLuoDzd.jpg"
             alt=""
           />
 
