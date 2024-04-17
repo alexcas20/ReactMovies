@@ -1,0 +1,50 @@
+
+
+*:focus{
+    border: none;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+
+.search {
+    width: 120px;
+    background-color: #43e148;
+    padding: 5px;
+    border: currentColor;
+    border-radius: 5px;
+    transition: all .3s ease-in-out;
+
+
+ &:hover{
+    width: 250px;
+ }
+
+
+   
+   
+}
+
+
+
+.btn-search{
+    margin-left: 5px;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #b7b9bb;
+    width: 80px;
+    border: currentColor;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+
+    &:hover{
+        box-shadow: 0 0 5px #b7b9bb;
+    }
+}
+
+
+
+   

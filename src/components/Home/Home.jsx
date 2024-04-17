@@ -1,25 +1,21 @@
 import { Navbar } from "../Navbar/Navbar";
 import Carrousel from "../Carrousel/Carrousel";
-import { useFetch } from "../../hooks/useFetch";
 import "./home.css";
-import { CardMovie } from "../CardMovie/CardMovie/CardMovie";
+import { Search } from "../Search/Search";
+
+import { Movies } from "../Movies/Movies";
 
 export const Home = () => {
-  const URL = ` https://api.themoviedb.org/3/movie/`;
-  const { data } = useFetch(URL,'popular');
-
   return (
     <>
       <Navbar />
-      <Carrousel  />
+      <Carrousel />
 
-      
-        <h2>Popular Now! 🎇</h2>
-        <hr />
+      <h2>Popular Now! 🎇</h2>
+      <hr />
 
-       <CardMovie data={data}/>
-
-      </>
-
+      <Search />
+      <Movies />
+    </>
   );
 };

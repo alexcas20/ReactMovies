@@ -12,42 +12,6 @@ nav{
         position: relative;
         z-index: 100;
     
-       
-      & .search{
-        background-color: #11e280b7;
-        display: flex;
-        position: absolute;
-        top: 30px;
-        right: 30px;
-        border: none;
-        border-radius: 5px;
-        width: 40px;
-        transition: all .6s ease-in-out;
-
-        & input{
-          background-color: transparent;
-          border: none;
-          width: 100%;
-
-        
-
-        }
-
-
-        & button{
-          color: #fff;
-        }
-
-        &:hover{
-          width: 250px;
-        }
-
-       
-
-        
-
-
-    
       }
 
 
@@ -72,7 +36,7 @@ nav{
     
     
     
-    }
+  
 
    
 

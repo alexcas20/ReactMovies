@@ -1,51 +1,44 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState } from "react";
 
+// const API_ENDPOINT = "https://api.themoviedb.org/3/search/movie?query=";
+const API_ENDPOINT = "https://api.themoviedb.org/3/";
+const API_KEY =
+  "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIwZjE0ZGM2YjhjY2UwODI0YzJiNmI0N2ExY2M3MWM5NSIsInN1YiI6IjY1Zjc4ZTBlYTZmZGFhMDE3ZDZlN2IxMyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.NNXsCgXn-Q_Zh6lxy4IlZwIiLaomiOCA2gvaSe_zmU8";
 
-export const useFetch = (url,filter) => {
-
-
- 
-  const options = {
-    method: 'GET',
-    headers: {
-      accept: 'application/json',
-      Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0MTUxMGEwMzBkNWM5YmJiNTQ4Yjc2OGE0N2EzYjI1YiIsInN1YiI6IjY1Zjc4ZTBlYTZmZGFhMDE3ZDZlN2IxMyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.G6IKIUXlkVX51aDx0-MBx3-uA8gNGfKbz8huIDb-buw'
-    }
-  };
-
-
+export const useFetch = (params) => {
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(false);
   const [data, setData] = useState([]);
 
-
-  const getFetch = async () => {
+  const fetchMovie = (url) => {
+    console.log(url);
     try {
-      const formatUrl = url+filter;
-      const response = await fetch(formatUrl, options);
-      const dataResponse = await response.json();
-      setData(dataResponse.results);
+      setIsLoading(true);
+      fetch(url, {
+        headers: {
+          Authorization: "Bearer " + API_KEY,
+        },
+      })
+        .then((response) => response.json())
+        .then((dataResponse) => {
+          setData(dataResponse.results);
+          setError(false);
 
-      console.log(dataResponse.results);
-
-
-      
+          setIsLoading(false);
+          console.log("data: ", dataResponse.results);
+        });
     } catch (error) {
-
       console.log(error);
-      
     }
   };
 
-
-  useEffect (() => {
-    getFetch();
-  }, []);
-
+  useEffect(() => {
+    fetchMovie(`${API_ENDPOINT}${params}`);
+  }, [params]);
 
   return {
-   data
-  }
- 
-
-
-
-}
+    isLoading,
+    error,
+    data,
+  };
+};
