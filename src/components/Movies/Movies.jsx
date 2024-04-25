@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { DataContext } from "../../context/DataContext";
 import { CardMovie } from "../CardMovie/CardMovie";
 import "./movies.css"
+import { Spinner } from "../shared/Spinner/Spinner";
 
 export const Movies = () => {
   const { isLoading, data } = useContext(DataContext);
@@ -18,7 +19,7 @@ export const Movies = () => {
               poster_path={item.poster_path}
             />
           ))
-        : "No hay data"}
+        : <Spinner/>}
     </article>
   );
 };
