@@ -9,8 +9,9 @@ export const Movies = () => {
 
   console.log(data)
   return (
+    
     <article>
-      {!isLoading
+      {!isLoading && data.length > 0
        ? data.map((item) => (
             <CardMovie
               key={item.id}
@@ -19,7 +20,10 @@ export const Movies = () => {
               poster_path={item.poster_path}
             />
           ))
-        : <Spinner/>}
+        
+      : (!data.length)
+      ? <h3>No data found</h3>
+      : <Spinner/>}
     </article>
   );
 };

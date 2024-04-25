@@ -4,6 +4,7 @@ import "./home.css";
 import { Search } from "../Search/Search";
 
 import { Movies } from "../Movies/Movies";
+import { Footer } from "../shared/Footer/Footer";
 
 export const Home = () => {
   return (
@@ -16,6 +17,7 @@ export const Home = () => {
 
       <Search />
       <Movies />
+      <Footer/>
     </>
   );
 };

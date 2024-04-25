@@ -2,7 +2,7 @@
     margin-top: 3rem;
     width: 100px;
     height: 100px;
-    position: relative;
+    position: absolute;
     background-image:
       linear-gradient(#FFF 16px, transparent 0) ,
       linear-gradient(#11ff00 16px, transparent 0) ,
@@ -15,12 +15,14 @@
   }
 
   .textLoader{
+    text-align: center;
     letter-spacing: 5px;
-    position: absolute;
-    bottom: -5px;
+    position: relative;
+    bottom: -7rem;
     color: #11ff00;
     font-size: 18px;
     font-weight: bolder;
+    margin-bottom: 10rem;
   }
 
  

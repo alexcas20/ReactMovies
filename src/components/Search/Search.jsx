@@ -11,13 +11,21 @@ export const Search = () => {
 
   const addRuta = "search/movie?query=";
 
+  const handleKey = (e) => {
+    if(e.keyCode === 13) 
+      handleSubmit(e);
+    else return
+  }
+
   const handleInputChange = (e) => {
     setTitle(e.target.value);
+    
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setQuery(addRuta + title);
+    setTitle("");
 
     console.log(title);
   };
@@ -31,6 +39,7 @@ export const Search = () => {
         className="search"
         onChange={handleInputChange}
         value={title}
+        onKeyDown={handleKey}
       />
       <button type="submit" className="btn-search">
         Search
