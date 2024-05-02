@@ -15,7 +15,7 @@ export const Navbar = () => {
 
   return (
  
-      <nav>
+      <nav className="nav-links">
         <a href="">
           <HomeIcon />
         </a>

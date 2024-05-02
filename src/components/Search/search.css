@@ -46,5 +46,25 @@
 }
 
 
+h4{
+    text-transform: uppercase;
+    padding-left: 3rem;
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-align: start;
+    color: #83ee40;
+}
+
+h5{
+    margin-top: -1rem;
+    padding-left: 3.5rem;
+    color: #c1cdbbc4;
+    font-size: 15px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+
 
    

@@ -4,33 +4,36 @@
   outline: none;
 }
 
-nav{
+.nav-links{
         padding: 35px 10px 40px 50px;
         background-color: #1c1d33;
         font-size: 1.5rem;
         font-weight: bold;
         position: relative;
         z-index: 100;
+
+
+        & a{
+          padding: 25px 30px 15px 20px;
+          text-decoration: none;
+          color: #c1c1cc;
+          transition: all .3s ease-in;
+
+
+          &:hover{
+            box-shadow: 0 2px 0 #fff;
+            color: #11e280b7;
+    }
+   
+      
+   }
     
       }
 
 
      
     
-    & a{
-            padding: 25px 30px 15px 20px;
-            text-decoration: none;
-            color: #c1c1cc;
-            transition: all .3s ease-in;
-
-
-            &:hover{
-              box-shadow: 0 2px 0 #fff;
-              color: #11e280b7;
-      }
-     
-        
-     }
+   
     
     
     

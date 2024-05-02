@@ -12,7 +12,7 @@ export const Home = () => {
       <Navbar />
       <Carrousel />
 
-      <h2>Popular Now! 🎇</h2>
+      <h2>JMovies 🔱!</h2>
       <hr />
 
       <Search />

@@ -10,33 +10,53 @@ footer{
     & span{
         font-weight: bolder;
         letter-spacing: 5px;
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
 
     & h3 {
+        font-size: 20px;
         letter-spacing: 3px;
         text-align: center;
     }
 
-    & .links ul {
+    & .footer-links{
         display: flex;
         justify-content: center;
-        padding: 1rem;
-        list-style: none;
-        transition: all .8s ease-in-out;
 
-        & li{
-            padding-left: 18px;
+        &  ul {
+            list-style: none;
+            padding: 0;
+    
+            & li {
+                display: inline;
+                margin-right: 20px;
+    
+    
+                & a {
+                   
+                    color: #64df17;
+                    text-decoration: none;
+                    transition: all .5s ease-in-out;
+
+                   
+                  }
+
+                  & :hover{
+                    color: #c9bfbf96;
+                    transform: translateY(-5px);
+                }
+              }
+          }
           
 
-            
-        }
-
-        & :hover{
-            cursor: pointer;
-            transform: translateY(-3px);
-            color: #b5c0b6;
-        }
-
     }
+
+    
+     
+      
+    
+
+   
+
+   
 }
