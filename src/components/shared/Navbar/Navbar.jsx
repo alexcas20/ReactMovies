@@ -2,6 +2,7 @@ import "./navbar.css";
 import HomeIcon from "@mui/icons-material/Home";
 import MoviesIcon from "@mui/icons-material/Movie";
 import SeriesIcon from "@mui/icons-material/Tv";
+import { Link } from "react-router-dom";
 
 
 
@@ -14,20 +15,22 @@ export const Navbar = () => {
 
 
   return (
- 
-      <nav className="nav-links">
-        <a href="">
+      <header>
+         <nav className="nav-links">
+        <Link to={"/"} >
           <HomeIcon />
-        </a>
-        <a href="">
+        </Link>
+        <Link to={"/"}>
           <MoviesIcon />
-        </a>
+        </Link>
         <a href="">
           <SeriesIcon />
         </a>
 
        
       </nav>
+      </header>
+     
       
   );
 };

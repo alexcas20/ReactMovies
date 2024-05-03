@@ -5,6 +5,7 @@
 }
 
 .container{
+    margin-top: 3rem;
     display: flex;
     justify-content: center;
 }
@@ -57,8 +58,9 @@ h4{
 }
 
 h5{
-    margin-top: -1rem;
-    padding-left: 3.5rem;
+    margin-top: -2rem;
+    padding-left: 4rem;
+    letter-spacing: 1px;
     color: #c1cdbbc4;
     font-size: 15px;
     font-weight: 900;

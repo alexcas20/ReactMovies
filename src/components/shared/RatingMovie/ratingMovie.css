@@ -1,0 +1,16 @@
+.rate{
+  
+
+    display: flex;
+    justify-content: flex-start;
+    margin-top: -20px;
+    margin-bottom: 30px;
+
+    
+}
+
+.rate-stars{
+    background-color: #5f5f6386;
+    padding: 5px;
+    border-radius: 8px;
+}

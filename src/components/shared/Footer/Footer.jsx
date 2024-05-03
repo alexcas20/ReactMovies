@@ -6,24 +6,24 @@ import "./footer.css";
 export const Footer = () => {
   return (
     <footer>
-      <span>JMOVIES</span>
+      <section className="section-footer">
+        <span>JMOVIES</span>
+        
 
-      <nav className="footer-links">
-        <ul>
-          <li>
-            <a href="/about">
-              <GitIcon fontSize="large" />
-            </a>
-          </li>
-          <li>
-            <a href="/contact">
-              <LinkIcon fontSize="large" />
-            </a>
-          </li>
-        </ul>
-      </nav>
+        <nav className="footer-links">
+          
+              <a href="/about">
+                <GitIcon fontSize="large" />
+              </a>
+            
+              <a href="/contact">
+                <LinkIcon fontSize="large" />
+              </a>
+         
+        </nav>
 
-      <h3>By Jacs with 🤍</h3>
+        <h3>By Jacs with 🤍</h3>
+      </section>
     </footer>
   );
 };
