@@ -8,6 +8,8 @@ export const DataProvider = ({ children }) => {
   const [query, setQuery] = useState("movie/popular");
   const { isLoading, error, data } = useFetch(`${query}`);
 
+
+
   console.log("dataContext: ", data)
 
   return (
