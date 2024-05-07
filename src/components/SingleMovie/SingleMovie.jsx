@@ -5,10 +5,12 @@ import { RatingMovie } from "../shared/RatingMovie/RatingMovie";
 import TimerIcon from "@mui/icons-material/Timer";
 
 import "./singleMovie.css";
+import { Spinner } from "../shared/Spinner/Spinner";
 
 export const SingleMovie = () => {
   const { id } = useParams();
   const [data, setData] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
   const [date, setDate] = useState("");
   const [genres, setGenres] = useState([]);
   const [vote, setVote] = useState(0);
@@ -19,6 +21,7 @@ export const SingleMovie = () => {
 
   const fetchDetailsMovie = async () => {
     try {
+      setIsLoading(true);
       const response = await fetch(ruta, {
         headers: {
           Authorization: "Bearer " + API_KEY,
@@ -31,6 +34,7 @@ export const SingleMovie = () => {
       setDate(newData.release_date);
       setGenres(newData.genres);
       setVote(newData.vote_average.toFixed(1));
+      setIsLoading(false);
       console.log(newData);
     } catch (error) {
       // Manejo de errores
@@ -46,32 +50,34 @@ export const SingleMovie = () => {
 
   return (
     <>
-      <article>
-        <section className="details-movie">
-          <img
-            src={` https://image.tmdb.org/t/p/w300/${data.poster_path}`}
-            alt=""
-          />
-          <div className="details-info">
-            <span>{date.slice(0, 4)}</span>
-            <h3>{data.title}</h3>
-            <RatingMovie rate={parseInt(vote)} />
-            <p>{data.overview}</p>
-            <div className="details-info-timer">
-              <TimerIcon fontSize="medium" />
-              <span>{data.runtime}m</span>
-            </div>
+      <section>
+        {isLoading ? (
+          <Spinner />
+        ) : (
+          <article className="details-movie">
+            <img
+              src={` https://image.tmdb.org/t/p/w300/${data.poster_path}`}
+              alt=""
+            />
+            <div className="details-info">
+              <span>{date.slice(0, 4)}</span>
+              <h3>{data.title}</h3>
+              <RatingMovie rate={parseInt(vote)} />
+              <p>{data.overview}</p>
+              <div className="details-info-timer">
+                <TimerIcon fontSize="medium" />
+                <span>{data.runtime}m</span>
+              </div>
 
-            <ul className="details-info-genres">
-              {genres.map((genre) => (
-                <li key={genre.id}>{genre.name}</li>
-              ))}
-            </ul>
-          </div>
-          {/* genres */}
-          {/* vote_average */}
-        </section>
-      </article>
+              <ul className="details-info-genres">
+                {genres.map((genre) => (
+                  <li key={genre.id}>{genre.name}</li>
+                ))}
+              </ul>
+            </div>
+          </article>
+        )}
+      </section>
     </>
   );
 };

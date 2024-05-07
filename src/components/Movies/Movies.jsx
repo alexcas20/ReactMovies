@@ -16,7 +16,7 @@ export const Movies = () => {
     
      
 
-      <article>
+      <section className="container-movies">
         {!isLoading && data.length > 0 ? (
           data.map((item) => (
             <CardMovie
@@ -31,7 +31,7 @@ export const Movies = () => {
         ) : (
           <Spinner />
         )}
-      </article>
+      </section>
     
   );
 };
